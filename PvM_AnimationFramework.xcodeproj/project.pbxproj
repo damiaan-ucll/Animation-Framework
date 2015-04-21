@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74E092551AE65D9F00A55448 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E092541AE65D9F00A55448 /* main.cpp */; };
+		74E0926C1AE65DC100A55448 /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E092601AE65DC100A55448 /* App.cpp */; };
+		74E0926D1AE65DC100A55448 /* AppConfigurationFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E092611AE65DC100A55448 /* AppConfigurationFileReader.cpp */; };
+		74E0926E1AE65DC100A55448 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E092641AE65DC100A55448 /* Renderer.cpp */; };
+		74E0926F1AE65DC100A55448 /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E0926A1AE65DC100A55448 /* Point.cpp */; };
+		74E092721AE65ECE00A55448 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E092701AE65ECE00A55448 /* GLUT.framework */; };
+		74E092731AE65ECE00A55448 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E092711AE65ECE00A55448 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +29,18 @@
 
 /* Begin PBXFileReference section */
 		74E092511AE65D9F00A55448 /* PvM_AnimationFramework */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PvM_AnimationFramework; sourceTree = BUILT_PRODUCTS_DIR; };
-		74E092541AE65D9F00A55448 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		74E0925D1AE65DC100A55448 /* app1.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app1.cfg; sourceTree = "<group>"; };
+		74E092601AE65DC100A55448 /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
+		74E092611AE65DC100A55448 /* AppConfigurationFileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppConfigurationFileReader.cpp; sourceTree = "<group>"; };
+		74E092621AE65DC100A55448 /* AppConfigurationFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigurationFileReader.h; sourceTree = "<group>"; };
+		74E092641AE65DC100A55448 /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		74E092651AE65DC100A55448 /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		74E092671AE65DC100A55448 /* WorldWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldWindow.h; sourceTree = "<group>"; };
+		74E092691AE65DC100A55448 /* Colour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colour.h; sourceTree = "<group>"; };
+		74E0926A1AE65DC100A55448 /* Point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
+		74E0926B1AE65DC100A55448 /* Point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Point.h; sourceTree = "<group>"; };
+		74E092701AE65ECE00A55448 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		74E092711AE65ECE00A55448 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E092721AE65ECE00A55448 /* GLUT.framework in Frameworks */,
+				74E092731AE65ECE00A55448 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +59,8 @@
 		74E092481AE65D9F00A55448 = {
 			isa = PBXGroup;
 			children = (
+				74E092701AE65ECE00A55448 /* GLUT.framework */,
+				74E092711AE65ECE00A55448 /* OpenGL.framework */,
 				74E092531AE65D9F00A55448 /* PvM_AnimationFramework */,
 				74E092521AE65D9F00A55448 /* Products */,
 			);
@@ -57,9 +77,70 @@
 		74E092531AE65D9F00A55448 /* PvM_AnimationFramework */ = {
 			isa = PBXGroup;
 			children = (
-				74E092541AE65D9F00A55448 /* main.cpp */,
+				74E0925F1AE65DC100A55448 /* app */,
+				74E092631AE65DC100A55448 /* renderer */,
+				74E092661AE65DC100A55448 /* scene */,
+				74E092681AE65DC100A55448 /* util */,
+				74E0925B1AE65DC100A55448 /* resources */,
 			);
 			path = PvM_AnimationFramework;
+			sourceTree = "<group>";
+		};
+		74E0925B1AE65DC100A55448 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				74E0925C1AE65DC100A55448 /* cfg */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		74E0925C1AE65DC100A55448 /* cfg */ = {
+			isa = PBXGroup;
+			children = (
+				74E0925D1AE65DC100A55448 /* app1.cfg */,
+			);
+			path = cfg;
+			sourceTree = "<group>";
+		};
+		74E0925F1AE65DC100A55448 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				74E092601AE65DC100A55448 /* App.cpp */,
+				74E092611AE65DC100A55448 /* AppConfigurationFileReader.cpp */,
+				74E092621AE65DC100A55448 /* AppConfigurationFileReader.h */,
+			);
+			name = app;
+			path = src/app;
+			sourceTree = "<group>";
+		};
+		74E092631AE65DC100A55448 /* renderer */ = {
+			isa = PBXGroup;
+			children = (
+				74E092641AE65DC100A55448 /* Renderer.cpp */,
+				74E092651AE65DC100A55448 /* Renderer.h */,
+			);
+			name = renderer;
+			path = src/renderer;
+			sourceTree = "<group>";
+		};
+		74E092661AE65DC100A55448 /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				74E092671AE65DC100A55448 /* WorldWindow.h */,
+			);
+			name = scene;
+			path = src/scene;
+			sourceTree = "<group>";
+		};
+		74E092681AE65DC100A55448 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				74E092691AE65DC100A55448 /* Colour.h */,
+				74E0926A1AE65DC100A55448 /* Point.cpp */,
+				74E0926B1AE65DC100A55448 /* Point.h */,
+			);
+			name = util;
+			path = src/util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +199,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74E092551AE65D9F00A55448 /* main.cpp in Sources */,
+				74E0926E1AE65DC100A55448 /* Renderer.cpp in Sources */,
+				74E0926D1AE65DC100A55448 /* AppConfigurationFileReader.cpp in Sources */,
+				74E0926F1AE65DC100A55448 /* Point.cpp in Sources */,
+				74E0926C1AE65DC100A55448 /* App.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +244,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -196,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
