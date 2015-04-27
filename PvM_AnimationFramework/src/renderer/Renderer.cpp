@@ -15,5 +15,3 @@ void Renderer::render(){
 		glVertex2f(250,400);
 	glEnd();
 }
-
-
