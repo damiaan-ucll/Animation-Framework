@@ -20,9 +20,7 @@ class Circle: Shape {
 	
 	Point centre;
 	double radius;
-	
-	int drawIterations = 0;
-	
+		
 public:
 	
 	Circle(Point centre, double radius, Colour colour): centre(centre), radius(radius), Shape(colour) {}

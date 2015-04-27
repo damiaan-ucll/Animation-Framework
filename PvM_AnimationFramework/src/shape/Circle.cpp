@@ -31,7 +31,7 @@ double interpolateAngle(int segments, int value) {
 void Circle::draw() const {
 	Shape::draw();
 
-	const int segments = 30;
+	const int segments = 50;
 	
 	glBegin(GL_POLYGON);
 	for (int i = 0; i<segments; ++i) {
