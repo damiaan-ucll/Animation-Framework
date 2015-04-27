@@ -6,14 +6,9 @@
 #endif
 
 #include "../renderer/Renderer.h"
+#include "../shape/Circle.h"
 
 void Renderer::render(){
-	glColor3f(0,0.4
-			  ,1);
-	glBegin(GL_POLYGON);
-		glVertex2f(700,50);
-		glVertex2f(900,50);
-		glVertex2f(900,450);
-		glVertex2f(700,450);
-	glEnd();
+	const Circle c(Point(250, 250), 150, Colour(1,1,0));
+	c.draw();
 }

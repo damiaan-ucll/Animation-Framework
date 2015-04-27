@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		745C0C661AEE6FF900E71ACF /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 745C0C641AEE6FF900E71ACF /* Shape.cpp */; };
+		745C0C691AEE722D00E71ACF /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 745C0C671AEE722D00E71ACF /* Circle.cpp */; };
+		745C0C6C1AEE745F00E71ACF /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 745C0C6A1AEE745F00E71ACF /* Vector.cpp */; };
 		74E0926C1AE65DC100A55448 /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E092601AE65DC100A55448 /* App.cpp */; };
 		74E0926D1AE65DC100A55448 /* AppConfigurationFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E092611AE65DC100A55448 /* AppConfigurationFileReader.cpp */; };
 		74E0926E1AE65DC100A55448 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E092641AE65DC100A55448 /* Renderer.cpp */; };
@@ -28,6 +31,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		745C0C621AEE6F7A00E71ACF /* IDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDrawable.h; path = src/shape/IDrawable.h; sourceTree = "<group>"; };
+		745C0C641AEE6FF900E71ACF /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shape.cpp; path = src/shape/Shape.cpp; sourceTree = "<group>"; };
+		745C0C651AEE6FF900E71ACF /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shape.h; path = src/shape/Shape.h; sourceTree = "<group>"; };
+		745C0C671AEE722D00E71ACF /* Circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Circle.cpp; path = src/shape/Circle.cpp; sourceTree = "<group>"; };
+		745C0C681AEE722D00E71ACF /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Circle.h; path = src/shape/Circle.h; sourceTree = "<group>"; };
+		745C0C6A1AEE745F00E71ACF /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
+		745C0C6B1AEE745F00E71ACF /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
 		74E092511AE65D9F00A55448 /* PvM_AnimationFramework */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PvM_AnimationFramework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E0925D1AE65DC100A55448 /* app1.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app1.cfg; sourceTree = "<group>"; };
 		74E092601AE65DC100A55448 /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
@@ -56,6 +66,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		745C0C601AEE6F5300E71ACF /* shape */ = {
+			isa = PBXGroup;
+			children = (
+				745C0C621AEE6F7A00E71ACF /* IDrawable.h */,
+				745C0C641AEE6FF900E71ACF /* Shape.cpp */,
+				745C0C651AEE6FF900E71ACF /* Shape.h */,
+				745C0C671AEE722D00E71ACF /* Circle.cpp */,
+				745C0C681AEE722D00E71ACF /* Circle.h */,
+			);
+			name = shape;
+			sourceTree = "<group>";
+		};
 		74E092481AE65D9F00A55448 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +101,7 @@
 			children = (
 				74E0925F1AE65DC100A55448 /* app */,
 				74E092631AE65DC100A55448 /* renderer */,
+				745C0C601AEE6F5300E71ACF /* shape */,
 				74E092661AE65DC100A55448 /* scene */,
 				74E092681AE65DC100A55448 /* util */,
 				74E0925B1AE65DC100A55448 /* resources */,
@@ -138,6 +161,8 @@
 				74E092691AE65DC100A55448 /* Colour.h */,
 				74E0926A1AE65DC100A55448 /* Point.cpp */,
 				74E0926B1AE65DC100A55448 /* Point.h */,
+				745C0C6A1AEE745F00E71ACF /* Vector.cpp */,
+				745C0C6B1AEE745F00E71ACF /* Vector.h */,
 			);
 			name = util;
 			path = src/util;
@@ -200,7 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				74E0926E1AE65DC100A55448 /* Renderer.cpp in Sources */,
+				745C0C6C1AEE745F00E71ACF /* Vector.cpp in Sources */,
+				745C0C691AEE722D00E71ACF /* Circle.cpp in Sources */,
 				74E0926D1AE65DC100A55448 /* AppConfigurationFileReader.cpp in Sources */,
+				745C0C661AEE6FF900E71ACF /* Shape.cpp in Sources */,
 				74E0926F1AE65DC100A55448 /* Point.cpp in Sources */,
 				74E0926C1AE65DC100A55448 /* App.cpp in Sources */,
 			);
