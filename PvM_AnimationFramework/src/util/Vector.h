@@ -19,8 +19,8 @@ public:
 	
 	Vector(double x, double y): x(x), y(y) {}
 	
-	Point operator + (Point& point);
-	friend Point operator + (Point& point, Vector& vector);
+	Point operator + (const Point& point) const;
+	friend Point operator + (const Point& point, const Vector& vector);
 };
 
 #endif /* defined(__PvM_AnimationFramework__Vector__) */

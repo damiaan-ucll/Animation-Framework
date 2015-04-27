@@ -6,9 +6,9 @@
 #endif
 
 #include "../renderer/Renderer.h"
-#include "../shape/Circle.h"
 
 void Renderer::render(){
-	const Circle c(Point(250, 250), 150, Colour(1,1,0));
+	
 	c.draw();
+	c.update();
 }

@@ -8,10 +8,10 @@
 
 #include "Vector.h"
 
-Point Vector::operator + (Point &point) {
+Point Vector::operator + (const Point &point) const {
 	return Point(x + point.x, y + point.y);
 }
 
-Point operator + (Point& point, Vector& vector) {
+Point operator + (const Point& point, const Vector& vector) {
 	return vector + point;
 }

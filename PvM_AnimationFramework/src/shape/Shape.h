@@ -24,7 +24,7 @@ public:
 	Colour getColour() const { return colour; }
 	void setColour(Colour newColour) { colour = newColour; }
 	
-	void draw() const;
+	virtual void draw() const;
 	
 };
 
