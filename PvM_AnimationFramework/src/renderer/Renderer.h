@@ -5,7 +5,7 @@
 
 class Renderer {
 	
-	DynamicCircle c = DynamicCircle(Point(250, 250), 150, Colour(1,1,0), Vector(5,0));
+	DynamicCircle c = DynamicCircle(Point(10, 250), 8, Colour(1,1,0), Vector(5,0));
 	
 public:
 	Renderer() {}
