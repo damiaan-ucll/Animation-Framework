@@ -24,18 +24,16 @@ void Circle::setRadius(double newRadius) {
 	radius = newRadius;
 }
 
-double interpolateAngle(int segments, int position) {
-	return 2 * position * M_PI / segments;
-}
-
 void Circle::draw() const {
 	Shape::draw();
 
-	const int segments = 40;
+	const int segments = 19;
+	
+	const double twoPi = 2 * M_PI;
+	const double angleUnit =  twoPi / segments;
 	
 	glBegin(GL_POLYGON);
-	for (int i = 0; i<segments; ++i) {
-		double angle = interpolateAngle(segments, i);
+	for (double angle = 0; angle < twoPi; angle+=angleUnit) {
 		glVertex2f(centre.x + radius * cos(angle), centre.y + radius * sin(angle));
 	}
 	glEnd();
