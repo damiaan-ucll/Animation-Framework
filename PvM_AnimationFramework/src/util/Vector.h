@@ -18,8 +18,9 @@ public:
 	#pragma mark - Member variables
 	double x, y;
 	
-	#pragma mark - Constructor
+	#pragma mark - Constructors
 	Vector(double x, double y): x(x), y(y) {}
+	Vector(Point& start, Point& end);
 	
 	
 	#pragma mark - Operator overloders

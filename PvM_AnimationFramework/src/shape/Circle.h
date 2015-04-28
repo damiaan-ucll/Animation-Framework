@@ -14,9 +14,7 @@
 #include "Shape.h"
 #include "../util/Point.h"
 
-#define PI 3.14159265
-
-class Circle: Shape {
+class Circle: public Shape {
 	
 	Point centre;
 	double radius;

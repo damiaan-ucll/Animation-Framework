@@ -8,6 +8,11 @@
 
 #include "Vector.h"
 
+Vector::Vector(Point& start, Point& end) {
+	x = end.x - start.x;
+	y = end.y - start.y;
+}
+
 Point Vector::operator + (const Point &point) const {
 	return Point(x + point.x, y + point.y);
 }
