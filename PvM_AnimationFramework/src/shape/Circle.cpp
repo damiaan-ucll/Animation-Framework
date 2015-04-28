@@ -25,7 +25,7 @@ void Circle::setRadius(double newRadius) {
 }
 
 double interpolateAngle(int segments, int position) {
-	return 2 * position * PI / segments;
+	return 2 * position * M_PI / segments;
 }
 
 void Circle::draw() const {
