@@ -15,12 +15,23 @@
 class Vector {
 public:
 	
+	#pragma mark - Member variables
 	double x, y;
 	
+	#pragma mark - Constructor
 	Vector(double x, double y): x(x), y(y) {}
 	
+	
+	#pragma mark - Operator overloders
 	Point operator + (const Point& point) const;
 	friend Point operator + (const Point& point, const Vector& vector);
+	
+	Vector operator * (const double factor);
+	friend Vector operator * (const Vector& vector, const double factor);
+	
+	Vector operator + (const Vector& right) const;
+	
+	Vector operator - (const Vector& right) const;
 };
 
 #endif /* defined(__PvM_AnimationFramework__Vector__) */

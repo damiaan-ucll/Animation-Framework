@@ -24,14 +24,14 @@ void Circle::setRadius(double newRadius) {
 	radius = newRadius;
 }
 
-double interpolateAngle(int segments, int value) {
-	return 2 * value * PI / segments;
+double interpolateAngle(int segments, int position) {
+	return 2 * position * PI / segments;
 }
 
 void Circle::draw() const {
 	Shape::draw();
 
-	const int segments = 50;
+	const int segments = 40;
 	
 	glBegin(GL_POLYGON);
 	for (int i = 0; i<segments; ++i) {

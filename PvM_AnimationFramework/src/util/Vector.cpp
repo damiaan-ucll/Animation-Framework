@@ -15,3 +15,19 @@ Point Vector::operator + (const Point &point) const {
 Point operator + (const Point& point, const Vector& vector) {
 	return vector + point;
 }
+
+Vector Vector::operator * (const double factor) {
+	return Vector(factor * x, factor * y);
+}
+
+Vector operator * (const Vector& vector, const double factor)  {
+	return vector * factor;
+}
+
+Vector Vector::operator + (const Vector& right) const {
+	return Vector(x + right.x, y + right.y);
+}
+
+Vector Vector::operator - (const Vector& right) const {
+	return Vector(x - right.x, y - right.y);
+}
