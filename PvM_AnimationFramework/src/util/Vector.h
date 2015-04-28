@@ -10,6 +10,7 @@
 #define __PvM_AnimationFramework__Vector__
 
 #include <stdio.h>
+#include <cmath>
 #include "Point.h"
 
 class Vector {
@@ -24,6 +25,7 @@ public:
 	
 	#pragma mark - Member functions
 	double dot(Vector&) const;
+	double length() const;
 	
 	#pragma mark - Operator overloders
 	Point operator + (const Point& point) const;

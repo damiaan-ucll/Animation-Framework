@@ -17,6 +17,10 @@ double Vector::dot(Vector& right) const {
 	return right.x*x + right.y*y;
 }
 
+double Vector::length() const {
+	return sqrt(x*x + y*y);
+}
+
 Point Vector::operator + (const Point &point) const {
 	return Point(x + point.x, y + point.y);
 }
