@@ -26,6 +26,7 @@ public:
 	#pragma mark - Member functions
 	double dot(Vector&) const;
 	double length() const;
+	void normalize();
 	
 	#pragma mark - Operator overloders
 	Point operator + (const Point& point) const;

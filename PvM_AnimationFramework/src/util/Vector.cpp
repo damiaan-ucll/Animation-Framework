@@ -8,11 +8,13 @@
 
 #include "Vector.h"
 
+#pragma mark - Constructor
 Vector::Vector(Point& start, Point& end) {
 	x = end.x - start.x;
 	y = end.y - start.y;
 }
 
+#pragma mark - Member functions
 double Vector::dot(Vector& right) const {
 	return right.x*x + right.y*y;
 }
@@ -21,6 +23,13 @@ double Vector::length() const {
 	return sqrt(x*x + y*y);
 }
 
+void Vector::normalize() {
+	double length = this->length();
+	x /= length;
+	y /= length;
+}
+
+#pragma mark - Operator overloders
 Point Vector::operator + (const Point &point) const {
 	return Point(x + point.x, y + point.y);
 }
