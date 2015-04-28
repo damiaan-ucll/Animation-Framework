@@ -13,6 +13,10 @@ Vector::Vector(Point& start, Point& end) {
 	y = end.y - start.y;
 }
 
+double Vector::dot(Vector& right) const {
+	return right.x*x + right.y*y;
+}
+
 Point Vector::operator + (const Point &point) const {
 	return Point(x + point.x, y + point.y);
 }

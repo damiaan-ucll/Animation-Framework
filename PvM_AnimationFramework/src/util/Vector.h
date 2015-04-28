@@ -22,6 +22,8 @@ public:
 	Vector(double x, double y): x(x), y(y) {}
 	Vector(Point& start, Point& end);
 	
+	#pragma mark - Member functions
+	double dot(Vector&) const;
 	
 	#pragma mark - Operator overloders
 	Point operator + (const Point& point) const;
