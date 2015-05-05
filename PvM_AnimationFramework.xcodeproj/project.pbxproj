@@ -44,6 +44,7 @@
 		745C0C6E1AEE85CB00E71ACF /* IAnimatable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IAnimatable.h; path = src/shape/IAnimatable.h; sourceTree = "<group>"; };
 		745C0C731AEE86AC00E71ACF /* DynamicCircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicCircle.cpp; path = src/shape/DynamicCircle.cpp; sourceTree = "<group>"; };
 		745C0C741AEE86AC00E71ACF /* DynamicCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicCircle.h; path = src/shape/DynamicCircle.h; sourceTree = "<group>"; };
+		74DD806D1AF8D43200E00060 /* circles.sdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = circles.sdl; path = sdl/circles.sdl; sourceTree = "<group>"; };
 		74E092511AE65D9F00A55448 /* PvM_AnimationFramework */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PvM_AnimationFramework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E0925D1AE65DC100A55448 /* app1.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app1.cfg; sourceTree = "<group>"; };
 		74E092601AE65DC100A55448 /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
@@ -88,6 +89,14 @@
 			name = shape;
 			sourceTree = "<group>";
 		};
+		74DD806C1AF8D3B800E00060 /* sdl */ = {
+			isa = PBXGroup;
+			children = (
+				74DD806D1AF8D43200E00060 /* circles.sdl */,
+			);
+			name = sdl;
+			sourceTree = "<group>";
+		};
 		74E092481AE65D9F00A55448 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +131,7 @@
 		74E0925B1AE65DC100A55448 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				74DD806C1AF8D3B800E00060 /* sdl */,
 				74E0925C1AE65DC100A55448 /* cfg */,
 			);
 			path = resources;
