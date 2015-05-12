@@ -12,6 +12,7 @@
 		745C0C6C1AEE745F00E71ACF /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 745C0C6A1AEE745F00E71ACF /* Vector.cpp */; };
 		745C0C6F1AEE85CB00E71ACF /* IAnimatable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 745C0C6D1AEE85CB00E71ACF /* IAnimatable.cpp */; };
 		745C0C751AEE86AC00E71ACF /* DynamicCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 745C0C731AEE86AC00E71ACF /* DynamicCircle.cpp */; };
+		74DD80711AF8D52100E00060 /* Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74DD806F1AF8D52100E00060 /* Scene.cpp */; };
 		74E0926C1AE65DC100A55448 /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E092601AE65DC100A55448 /* App.cpp */; };
 		74E0926D1AE65DC100A55448 /* AppConfigurationFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E092611AE65DC100A55448 /* AppConfigurationFileReader.cpp */; };
 		74E0926E1AE65DC100A55448 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74E092641AE65DC100A55448 /* Renderer.cpp */; };
@@ -45,6 +46,8 @@
 		745C0C731AEE86AC00E71ACF /* DynamicCircle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicCircle.cpp; path = src/shape/DynamicCircle.cpp; sourceTree = "<group>"; };
 		745C0C741AEE86AC00E71ACF /* DynamicCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicCircle.h; path = src/shape/DynamicCircle.h; sourceTree = "<group>"; };
 		74DD806D1AF8D43200E00060 /* circles.sdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = circles.sdl; path = sdl/circles.sdl; sourceTree = "<group>"; };
+		74DD806F1AF8D52100E00060 /* Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scene.cpp; sourceTree = "<group>"; };
+		74DD80701AF8D52100E00060 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		74E092511AE65D9F00A55448 /* PvM_AnimationFramework */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PvM_AnimationFramework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74E0925D1AE65DC100A55448 /* app1.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app1.cfg; sourceTree = "<group>"; };
 		74E092601AE65DC100A55448 /* App.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				74E092671AE65DC100A55448 /* WorldWindow.h */,
+				74DD806F1AF8D52100E00060 /* Scene.cpp */,
+				74DD80701AF8D52100E00060 /* Scene.h */,
 			);
 			name = scene;
 			path = src/scene;
@@ -252,6 +257,7 @@
 				74E0926F1AE65DC100A55448 /* Point.cpp in Sources */,
 				74E0926C1AE65DC100A55448 /* App.cpp in Sources */,
 				745C0C751AEE86AC00E71ACF /* DynamicCircle.cpp in Sources */,
+				74DD80711AF8D52100E00060 /* Scene.cpp in Sources */,
 				745C0C6F1AEE85CB00E71ACF /* IAnimatable.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
