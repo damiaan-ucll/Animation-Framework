@@ -8,7 +8,11 @@
 #include "../renderer/Renderer.h"
 
 void Renderer::render(){
+	for(auto &drawable : scene.getDrawables()) {
+		drawable->draw();
+	}
 	
-	c.draw();
-	c.update();
+	for (auto &animatable : scene.getAnimatables()) {
+		animatable->update();
+	}
 }

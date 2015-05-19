@@ -2,13 +2,14 @@
 #define RENDERER_H_
 
 #include "../shape/DynamicCircle.h"
+#include "Scene.h"
 
 class Renderer {
 	
-	DynamicCircle c = DynamicCircle(Point(10, 250), 8, Colour(1,1,0), Vector(5,1));
+	Scene scene;
 	
 public:
-	Renderer() {}
+	Renderer(Scene& scene) { this->scene = scene; }
 	void render();
 };
 
