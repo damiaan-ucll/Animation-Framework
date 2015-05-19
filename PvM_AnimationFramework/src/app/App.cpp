@@ -47,7 +47,7 @@ void renderScene(void){
 }
 
 int main(int argc, char ** argv){
-	SceneFactory::createScene();
+	SceneFactory::createScene("test");
 	
 	AppConfiguration appCfg = AppConfigurationFileReader::read(argv[1]);
 	nCols = std::atoi(appCfg["image.nCols"].c_str());

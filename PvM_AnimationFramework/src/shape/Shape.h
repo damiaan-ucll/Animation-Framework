@@ -13,7 +13,7 @@
 #include "IDrawable.h"
 #include "../util/Colour.h"
 
-class Shape: IDrawable {
+class Shape: public IDrawable {
 	
 	Colour colour;
 	

@@ -26,6 +26,9 @@ public:
 	std::vector<const IDrawable*>& getDrawables();
 	std::vector<IAnimatable*>& getAnimatables();
 	
+	void addDrawable(IDrawable& drawable);
+	void addAnimatable(IAnimatable& drawable);
+	
 };
 
 #endif /* defined(__PvM_AnimationFramework__Scene__) */

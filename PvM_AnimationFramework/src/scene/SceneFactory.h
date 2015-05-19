@@ -13,12 +13,16 @@
 #include <fstream>
 #include <string>
 #include <iostream>
+#include <unistd.h>
+#include <sstream>
 
 #include "Scene.h"
+#include "Circle.h"
+#include "DynamicCircle.h"
 
 class SceneFactory {
 public:
-	static Scene createScene();
+	static Scene createScene(std::string const & path);
 };
 
 #endif /* defined(__PvM_AnimationFramework__SceneFactory__) */

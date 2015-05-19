@@ -7,14 +7,44 @@
 //
 
 #include "SceneFactory.h"
-#include <unistd.h>
 
-Scene SceneFactory::createScene() {
-	std::ifstream inf("test");
+Scene SceneFactory::createScene(std::string const & path) {
+	std::ifstream inf(path);
 	
-	std::string firstLine;
-	std::getline(inf, firstLine);
-	std::cout << getcwd(NULL, 0);
+	if (!inf) {
+		std::cout << "test.dat could not be opened!\n";
+		exit(1);
+	}
 	
-	return Scene();
+	Scene scene;
+	
+	std::string line;
+	Colour colour;
+	while (std::getline(inf, line)) {
+		std::istringstream lineStream(line);
+		std::string keyword;
+		
+		lineStream >> keyword;
+		
+		if (keyword == "colour") {
+			double a, b, c;
+			lineStream >> a >> b >> c;
+			colour = Colour(a, b, c);
+		} else if (keyword == "circle") {
+			double x, y, radius;
+			lineStream >> x >> y >> radius;
+			Circle circle(Point(x, y), radius, colour);
+			
+			scene.addDrawable(circle);
+		} else if (keyword == "dynamicCircle") {
+			double x, y, radius, vx, vy;
+			lineStream >> x >> y >> radius >> vx >> vy;
+			DynamicCircle circle(Point(x, y), radius, colour, Vector(vx, vy));
+			
+			scene.addDrawable(circle);
+			scene.addAnimatable(circle);
+		}
+	}
+	
+	return scene;
 }
