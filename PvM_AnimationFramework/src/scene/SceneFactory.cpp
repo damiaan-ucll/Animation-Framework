@@ -33,13 +33,13 @@ Scene SceneFactory::createScene(std::string const & path) {
 		} else if (keyword == "circle") {
 			double x, y, radius;
 			lineStream >> x >> y >> radius;
-			Circle circle(Point(x, y), radius, colour);
+			Circle *circle = new Circle(Point(x, y), radius, colour);
 			
 			scene.addDrawable(circle);
 		} else if (keyword == "dynamicCircle") {
 			double x, y, radius, vx, vy;
 			lineStream >> x >> y >> radius >> vx >> vy;
-			DynamicCircle circle(Point(x, y), radius, colour, Vector(vx, vy));
+			DynamicCircle *circle = new DynamicCircle(Point(x, y), radius, colour, Vector(vx, vy));
 			
 			scene.addDrawable(circle);
 			scene.addAnimatable(circle);

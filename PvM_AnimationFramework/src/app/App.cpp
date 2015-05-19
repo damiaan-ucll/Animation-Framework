@@ -47,8 +47,6 @@ void renderScene(void){
 }
 
 int main(int argc, char ** argv){
-	SceneFactory::createScene("test");
-	
 	AppConfiguration appCfg = AppConfigurationFileReader::read(argv[1]);
 	nCols = std::atoi(appCfg["image.nCols"].c_str());
 	nRows = std::atoi(appCfg["image.nRows"].c_str());
@@ -56,7 +54,8 @@ int main(int argc, char ** argv){
 				std::atof(appCfg["worldwindow.right"].c_str()),
 				std::atof(appCfg["worldwindow.bottom"].c_str()),
 				std::atof(appCfg["worldwindow.top"].c_str()));
-	renderer = new Renderer();
+	Scene scene = SceneFactory::createScene(appCfg["scene.file"]);
+	renderer = new Renderer(scene);
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 	glutInitWindowSize(nCols, nRows);

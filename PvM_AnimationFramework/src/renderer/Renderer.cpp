@@ -6,8 +6,11 @@
 #endif
 
 #include "../renderer/Renderer.h"
+#include <stdio.h>
+#include <iostream>
 
 void Renderer::render(){
+	
 	for(auto &drawable : scene.getDrawables()) {
 		drawable->draw();
 	}
@@ -15,4 +18,5 @@ void Renderer::render(){
 	for (auto &animatable : scene.getAnimatables()) {
 		animatable->update();
 	}
+	
 }

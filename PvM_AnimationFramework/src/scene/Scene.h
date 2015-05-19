@@ -26,8 +26,8 @@ public:
 	std::vector<const IDrawable*>& getDrawables();
 	std::vector<IAnimatable*>& getAnimatables();
 	
-	void addDrawable(IDrawable& drawable);
-	void addAnimatable(IAnimatable& drawable);
+	void addDrawable(IDrawable* drawable);
+	void addAnimatable(IAnimatable* drawable);
 	
 };
 

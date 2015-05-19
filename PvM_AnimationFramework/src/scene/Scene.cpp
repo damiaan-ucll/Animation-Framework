@@ -16,10 +16,10 @@ std::vector<IAnimatable*>& Scene::getAnimatables() {
 	return animatables;
 }
 
-void Scene::addDrawable(IDrawable &drawable) {
-	drawables.push_back(&drawable);
+void Scene::addDrawable(IDrawable *drawable) {
+	drawables.push_back(drawable);
 }
 
-void Scene::addAnimatable(IAnimatable &animatable) {
-	animatables.push_back(&animatable);
+void Scene::addAnimatable(IAnimatable *animatable) {
+	animatables.push_back(animatable);
 }
