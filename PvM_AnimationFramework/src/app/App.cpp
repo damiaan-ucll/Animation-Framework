@@ -5,12 +5,14 @@
 #include <GL/glut.h>
 #endif
 
-#include "../renderer/Renderer.h"
-#include "../scene/WorldWindow.h"
-#include "../app/AppConfigurationFileReader.h"
 #include <string>
 #include <iostream>
 #include <cstdlib>
+
+#include "../renderer/Renderer.h"
+#include "../scene/WorldWindow.h"
+#include "../app/AppConfigurationFileReader.h"
+#include "SceneFactory.h"
 
 Renderer * renderer;
 int nCols, nRows;
@@ -45,6 +47,8 @@ void renderScene(void){
 }
 
 int main(int argc, char ** argv){
+	SceneFactory::createScene();
+	
 	AppConfiguration appCfg = AppConfigurationFileReader::read(argv[1]);
 	nCols = std::atoi(appCfg["image.nCols"].c_str());
 	nRows = std::atoi(appCfg["image.nRows"].c_str());
