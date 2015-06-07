@@ -13,7 +13,10 @@
 #include "Shape.h"
 
 class IAnimatable {
-public: virtual void update() = 0;
+public:
+	virtual void update() = 0;
+	
+	virtual ~IAnimatable() {};
 };
 
 #endif /* defined(__PvM_AnimationFramework__IAnimatable__) */

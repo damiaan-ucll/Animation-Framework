@@ -54,7 +54,8 @@ int main(int argc, char ** argv){
 				std::atof(appCfg["worldwindow.right"].c_str()),
 				std::atof(appCfg["worldwindow.bottom"].c_str()),
 				std::atof(appCfg["worldwindow.top"].c_str()));
-	Scene scene = SceneFactory::createScene(appCfg["scene.file"]);
+	Scene& scene = *SceneFactory::createScene(appCfg["scene.file"]);
+	std::cout << &scene << " (appScene)\n";
 	renderer = new Renderer(scene);
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);

@@ -22,6 +22,7 @@ class Scene {
 public:
 	
 	Scene() {}
+	~Scene();
 	
 	std::vector<const IDrawable*>& getDrawables();
 	std::vector<IAnimatable*>& getAnimatables();

@@ -8,6 +8,18 @@
 
 #include "Scene.h"
 
+Scene::~Scene() {
+	for (auto &drawable : drawables) {
+		delete drawable;
+	}
+	for (auto &animatable : animatables) {
+		delete animatable;
+	}
+	
+	drawables.clear();
+	animatables.clear();
+}
+
 std::vector<const IDrawable*>& Scene::getDrawables() {
 	return drawables;
 }

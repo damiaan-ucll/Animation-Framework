@@ -6,8 +6,6 @@
 #endif
 
 #include "../renderer/Renderer.h"
-#include <stdio.h>
-#include <iostream>
 
 void Renderer::render(){
 	

@@ -37,5 +37,4 @@ void Circle::draw() const {
 		glVertex2f(centre.x + radius * cos(angle), centre.y + radius * sin(angle));
 	}
 	glEnd();
-
 }

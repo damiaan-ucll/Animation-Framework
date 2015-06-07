@@ -22,6 +22,8 @@
 class IDrawable {
 public:
 	virtual void draw() const = 0;
+	
+	virtual ~IDrawable() {}
 };
 
 #endif /* defined(__PvM_AnimationFramework__IDrawable__) */
