@@ -14,7 +14,7 @@ void Renderer::render(){
 	}
 	
 	for (auto &animatable : scene.getAnimatables()) {
-		animatable->update();
+		animatable->update(scene);
 	}
 	
 }

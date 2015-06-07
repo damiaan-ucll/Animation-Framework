@@ -18,7 +18,7 @@ void DynamicCircle::setVelocity(Vector newVelocity) {
 	velocity = newVelocity;
 }
 
-void DynamicCircle::update() {
+void DynamicCircle::update(Scene& scene) {
 	if (getCentre().x+velocity.x+getRadius() > 1000) {
 		velocity.x = -fabs(velocity.x);
 	} else if (getCentre().x+velocity.x-getRadius() < 0) {

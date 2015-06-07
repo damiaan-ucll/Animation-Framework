@@ -11,10 +11,11 @@
 
 #include <stdio.h>
 #include "Shape.h"
+class Scene;
 
 class IAnimatable {
 public:
-	virtual void update() = 0;
+	virtual void update(Scene& scene) = 0;
 	
 	virtual ~IAnimatable() {};
 };

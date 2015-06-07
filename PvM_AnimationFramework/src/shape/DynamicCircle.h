@@ -25,7 +25,7 @@ public:
 	Vector getVelocity() const;
 	void   setVelocity(Vector);
 	
-	void update();
+	void update(Scene& scene);
 	
 };
 
