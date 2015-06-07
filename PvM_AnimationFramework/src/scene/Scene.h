@@ -13,15 +13,17 @@
 #include <vector>
 #include "../shape/IDrawable.h"
 #include "../shape/IAnimatable.h"
+#include "WorldWindow.h"
 
 class Scene {
 	
 	std::vector<const IDrawable*> drawables;
 	std::vector<IAnimatable*> animatables;
+	const WorldWindow* window;
 	
 public:
 	
-	Scene() {}
+	Scene(const WorldWindow * window): window(window) {}
 	~Scene();
 	
 	std::vector<const IDrawable*>& getDrawables();

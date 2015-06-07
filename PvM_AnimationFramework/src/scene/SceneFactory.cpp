@@ -8,7 +8,7 @@
 
 #include "SceneFactory.h"
 
-Scene* SceneFactory::createScene(std::string const & sceneFile) {
+Scene* SceneFactory::createScene(std::string const & sceneFile, const WorldWindow* window) {
 	std::ifstream inf(sceneFile);
 	
 	if (!inf) {
@@ -16,7 +16,7 @@ Scene* SceneFactory::createScene(std::string const & sceneFile) {
 		exit(1);
 	}
 	
-	Scene* scene = new Scene();
+	Scene * const scene = new Scene(window);
 	
 	std::string line;
 	Colour colour;
