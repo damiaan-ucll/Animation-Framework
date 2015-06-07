@@ -7,6 +7,7 @@
 //
 
 #include "Circle.h"
+#include "DynamicCircle.h"
 
 Point Circle::getCentre() const {
 	return centre;
@@ -37,4 +38,12 @@ void Circle::draw() const {
 		glVertex2f(centre.x + radius * cos(angle), centre.y + radius * sin(angle));
 	}
 	glEnd();
+}
+
+void Circle::bounceOnIntersection(DynamicCircle& circle) const {
+	double cdistance = circle.getCentre().distance(getCentre());
+	double radiusSum = circle.getRadius() + getRadius();
+	if (&circle != this && cdistance < radiusSum) {
+		circle.setVelocity(Vector(0, 0));
+	}
 }

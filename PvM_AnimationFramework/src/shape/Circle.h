@@ -28,6 +28,7 @@ public:
 	double getRadius() const;
 	void   setRadius(double newRadius);
 	
+	void bounceOnIntersection(DynamicCircle& circle) const;
 	void draw() const;
 	
 };

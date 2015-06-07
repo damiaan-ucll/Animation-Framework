@@ -28,11 +28,3 @@ void DynamicCircle::update(Scene& scene) {
 	setCentre(getCentre() + velocity);
 
 }
-
-//void DynamicCircle::bounceOnIntersection(DynamicCircle& circle) const {
-//	circle.getCentre();
-	
-//	if (circle.getCentre().distance(getCentre()) < circle.getRadius() + getRadius()) {
-//		circle.setVelocity(Vector(0, 0));
-//	}
-//}

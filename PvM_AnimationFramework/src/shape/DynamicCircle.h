@@ -25,7 +25,6 @@ public:
 	Vector getVelocity() const;
 	void   setVelocity(Vector);
 	
-//	void bounceOnIntersection(DynamicCircle& circle) const;
 	void update(Scene& scene);
 
 };
