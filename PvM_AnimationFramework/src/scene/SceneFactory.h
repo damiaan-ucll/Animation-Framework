@@ -22,7 +22,7 @@
 
 class SceneFactory {
 public:
-	static Scene* createScene(std::string const & sceneFile, const WorldWindow* window);
+	static Scene* createScene(std::string const & sceneFile, const IDrawable* window);
 };
 
 #endif /* defined(__PvM_AnimationFramework__SceneFactory__) */

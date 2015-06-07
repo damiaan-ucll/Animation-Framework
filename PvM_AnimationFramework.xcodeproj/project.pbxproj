@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		741362C81B01FE0C00C7B84D /* SceneFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 741362C61B01FE0C00C7B84D /* SceneFactory.cpp */; };
+		741422F91B24BE2D00AB72B9 /* WorldWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 741422F81B24BE2D00AB72B9 /* WorldWindow.cpp */; };
 		745C0C661AEE6FF900E71ACF /* Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 745C0C641AEE6FF900E71ACF /* Shape.cpp */; };
 		745C0C691AEE722D00E71ACF /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 745C0C671AEE722D00E71ACF /* Circle.cpp */; };
 		745C0C6C1AEE745F00E71ACF /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 745C0C6A1AEE745F00E71ACF /* Vector.cpp */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		741362C61B01FE0C00C7B84D /* SceneFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneFactory.cpp; sourceTree = "<group>"; };
 		741362C71B01FE0C00C7B84D /* SceneFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneFactory.h; sourceTree = "<group>"; };
+		741422F81B24BE2D00AB72B9 /* WorldWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorldWindow.cpp; sourceTree = "<group>"; };
 		745C0C621AEE6F7A00E71ACF /* IDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDrawable.h; path = src/shape/IDrawable.h; sourceTree = "<group>"; };
 		745C0C641AEE6FF900E71ACF /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shape.cpp; path = src/shape/Shape.cpp; sourceTree = "<group>"; };
 		745C0C651AEE6FF900E71ACF /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shape.h; path = src/shape/Shape.h; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		74E092661AE65DC100A55448 /* scene */ = {
 			isa = PBXGroup;
 			children = (
+				741422F81B24BE2D00AB72B9 /* WorldWindow.cpp */,
 				74E092671AE65DC100A55448 /* WorldWindow.h */,
 				74DD806F1AF8D52100E00060 /* Scene.cpp */,
 				74DD80701AF8D52100E00060 /* Scene.h */,
@@ -254,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				741422F91B24BE2D00AB72B9 /* WorldWindow.cpp in Sources */,
 				74E0926E1AE65DC100A55448 /* Renderer.cpp in Sources */,
 				745C0C6C1AEE745F00E71ACF /* Vector.cpp in Sources */,
 				745C0C691AEE722D00E71ACF /* Circle.cpp in Sources */,

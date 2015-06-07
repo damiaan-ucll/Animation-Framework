@@ -14,6 +14,8 @@
 #include "../util/Colour.h"
 
 class Shape: public IDrawable {
+
+protected:
 	
 	Colour colour;
 	

@@ -8,7 +8,7 @@
 
 #include "SceneFactory.h"
 
-Scene* SceneFactory::createScene(std::string const & sceneFile, const WorldWindow* window) {
+Scene* SceneFactory::createScene(std::string const & sceneFile, const IDrawable* window) {
 	std::ifstream inf(sceneFile);
 	
 	if (!inf) {

@@ -10,8 +10,7 @@
 #define __PvM_AnimationFramework__IAnimatable__
 
 #include <stdio.h>
-#include "Shape.h"
-class Scene;
+#include "Scene.h"
 
 class IAnimatable {
 public:

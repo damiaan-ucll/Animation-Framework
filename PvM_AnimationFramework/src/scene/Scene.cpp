@@ -8,6 +8,13 @@
 
 #include "Scene.h"
 
+#include "IDrawable.h"
+#include "IAnimatable.h"
+
+Scene::Scene(const IDrawable * window) {
+	drawables.push_back(window);
+}
+
 Scene::~Scene() {
 	for (auto &drawable : drawables) {
 		delete drawable;
@@ -15,9 +22,6 @@ Scene::~Scene() {
 	for (auto &animatable : animatables) {
 		delete animatable;
 	}
-	
-	drawables.clear();
-	animatables.clear();
 }
 
 std::vector<const IDrawable*>& Scene::getDrawables() {

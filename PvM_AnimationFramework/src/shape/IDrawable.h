@@ -18,10 +18,13 @@
 #include <GL/glut.h>
 #endif
 
+class DynamicCircle;
 
 class IDrawable {
 public:
 	virtual void draw() const = 0;
+	
+	virtual void bounceOnIntersection(DynamicCircle& circle) const {};
 	
 	virtual ~IDrawable() {}
 };

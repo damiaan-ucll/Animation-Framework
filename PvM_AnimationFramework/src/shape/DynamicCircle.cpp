@@ -8,6 +8,7 @@
 
 #include "DynamicCircle.h"
 
+
 DynamicCircle::DynamicCircle(Point centre, double radius, Colour colour, Vector velocity): Circle::Circle(centre, radius, colour), velocity(velocity) {}
 
 Vector DynamicCircle::getVelocity() const {
@@ -19,16 +20,19 @@ void DynamicCircle::setVelocity(Vector newVelocity) {
 }
 
 void DynamicCircle::update(Scene& scene) {
-	if (getCentre().x+velocity.x+getRadius() > 1000) {
-		velocity.x = -fabs(velocity.x);
-	} else if (getCentre().x+velocity.x-getRadius() < 0) {
-		velocity.x = fabs(velocity.x);
-	}
-	if (getCentre().y+velocity.y+getRadius() > 500) {
-		velocity.y = -fabs(velocity.y);
-	} else if (getCentre().y+getVelocity().y-getRadius() < 0) {
-		velocity.y = fabs(velocity.y);
+	
+	for (auto &drawable : scene.getDrawables()) {
+		drawable->bounceOnIntersection(*this);
 	}
 	
 	setCentre(getCentre() + velocity);
+
 }
+
+//void DynamicCircle::bounceOnIntersection(DynamicCircle& circle) const {
+//	circle.getCentre();
+	
+//	if (circle.getCentre().distance(getCentre()) < circle.getRadius() + getRadius()) {
+//		circle.setVelocity(Vector(0, 0));
+//	}
+//}

@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include "IAnimatable.h"
 #include "Circle.h"
-#include "../util/Vector.h"
+#include "Vector.h"
 
 class DynamicCircle: public Circle, public IAnimatable {
 	
@@ -25,8 +25,9 @@ public:
 	Vector getVelocity() const;
 	void   setVelocity(Vector);
 	
+//	void bounceOnIntersection(DynamicCircle& circle) const;
 	void update(Scene& scene);
-	
+
 };
 
 #endif /* defined(__PvM_AnimationFramework__DynamicCircle__) */

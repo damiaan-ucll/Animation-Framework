@@ -1,10 +1,13 @@
 #ifndef WORLDWINDOW_H_
 #define WORLDWINDOW_H_
 
+#include "IDrawable.h"
+#include "DynamicCircle.h"
+
 class WorldWindow: public IDrawable {
 	double left, right, bottom, top;
 public:
-	WorldWindow(double left=0, double right=0, double bottom=0, double top=0):left(left),right(right),bottom(bottom),top(top){}
+	WorldWindow(double left=0, double right=0, double bottom=0, double top=0): left(left), right(right), bottom(bottom), top(top){}
 	
 	double getBottom() const {return bottom;}
 	void   setBottom(double bottom) {this->bottom = bottom;}
@@ -21,6 +24,8 @@ public:
 	double getRatio(){return (right-left)/(top-bottom);}
 	
 	void draw() const {}
+	
+	void bounceOnIntersection(DynamicCircle& circle) const;
 };
 
 #endif /* WORLDWINDOW_H_ */
