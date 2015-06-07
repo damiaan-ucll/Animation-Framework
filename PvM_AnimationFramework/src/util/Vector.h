@@ -21,7 +21,7 @@ public:
 	
 	#pragma mark - Constructors
 	Vector(double x, double y): x(x), y(y) {}
-	Vector(Point& start, Point& end);
+	Vector(const Point& start, const Point& end);
 	
 	#pragma mark - Member functions
 	double dot(Vector&) const;
@@ -33,7 +33,7 @@ public:
 	friend Point operator + (const Point& point, const Vector& vector);
 	
 	Vector operator * (const double factor);
-	friend Vector operator * (const Vector& vector, const double factor);
+	friend Vector operator * (const double factor, Vector& vector);
 	
 	Vector operator + (const Vector& right) const;
 	

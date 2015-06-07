@@ -9,7 +9,7 @@
 #include "Vector.h"
 
 #pragma mark - Constructor
-Vector::Vector(Point& start, Point& end) {
+Vector::Vector(const Point& start, const Point& end) {
 	x = end.x - start.x;
 	y = end.y - start.y;
 }
@@ -42,7 +42,7 @@ Vector Vector::operator * (const double factor) {
 	return Vector(factor * x, factor * y);
 }
 
-Vector operator * (const Vector& vector, const double factor)  {
+Vector operator * (const double factor, Vector& vector)  {
 	return vector * factor;
 }
 

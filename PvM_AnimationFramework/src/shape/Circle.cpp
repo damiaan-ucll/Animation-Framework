@@ -41,9 +41,32 @@ void Circle::draw() const {
 }
 
 void Circle::bounceOnIntersection(DynamicCircle& circle) const {
-	double cdistance = circle.getCentre().distance(getCentre());
+	double distance = circle.getCentre().distance(getCentre());
 	double radiusSum = circle.getRadius() + getRadius();
-	if (&circle != this && cdistance < radiusSum) {
-		circle.setVelocity(Vector(0, 0));
+	
+	if (&circle != this && distance < radiusSum) {
+		
+		Vector velocity = circle.getVelocity();
+		Vector u = Vector(getCentre(), circle.getCentre());
+		
+		double a = velocity.dot(velocity);
+		double b = 2 * velocity.dot(u);
+		double c = u.dot(u) - radiusSum*radiusSum;
+		double d = b*b - 4*a*c;
+		
+		double t = (-b - sqrt(d)) / 2 / a;
+		
+		Vector u2n = Vector(getCentre(), circle.getCentre());
+		u2n.normalize();
+		Vector newVelocity = velocity - (2*velocity.dot(u2n) * u2n);
+		circle.setVelocity(newVelocity);
+		
+		circle.setCentre(circle.getCentre() + (velocity*t) + newVelocity);
+
+
+		
+//		circle.setVelocity(Vector(0, 0));
+		
+		
 	}
 }
