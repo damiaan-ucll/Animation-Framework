@@ -39,6 +39,8 @@
 		741362C61B01FE0C00C7B84D /* SceneFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneFactory.cpp; sourceTree = "<group>"; };
 		741362C71B01FE0C00C7B84D /* SceneFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneFactory.h; sourceTree = "<group>"; };
 		741422F81B24BE2D00AB72B9 /* WorldWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorldWindow.cpp; sourceTree = "<group>"; };
+		741422FA1B24ECC600AB72B9 /* app2.cfg */ = {isa = PBXFileReference; lastKnownFileType = text; path = app2.cfg; sourceTree = "<group>"; };
+		741422FC1B24ED1900AB72B9 /* circles2.sdl */ = {isa = PBXFileReference; lastKnownFileType = text; name = circles2.sdl; path = sdl/circles2.sdl; sourceTree = "<group>"; };
 		745C0C621AEE6F7A00E71ACF /* IDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDrawable.h; path = src/shape/IDrawable.h; sourceTree = "<group>"; };
 		745C0C641AEE6FF900E71ACF /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shape.cpp; path = src/shape/Shape.cpp; sourceTree = "<group>"; };
 		745C0C651AEE6FF900E71ACF /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shape.h; path = src/shape/Shape.h; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				74DD806D1AF8D43200E00060 /* circles.sdl */,
+				741422FC1B24ED1900AB72B9 /* circles2.sdl */,
 			);
 			name = sdl;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				74E0925D1AE65DC100A55448 /* app1.cfg */,
+				741422FA1B24ECC600AB72B9 /* app2.cfg */,
 			);
 			path = cfg;
 			sourceTree = "<group>";
