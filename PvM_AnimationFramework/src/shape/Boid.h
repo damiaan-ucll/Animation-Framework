@@ -9,9 +9,9 @@
 #ifndef __PvM_AnimationFramework__Boid__
 #define __PvM_AnimationFramework__Boid__
 
+#include <stdio.h>
 #include "Point.h"
 #include "Vector.h"
-#include <stdio.h>
 #include "IAnimatable.h"
 #include "Shape.h"
 
@@ -24,6 +24,8 @@ class Boid: public Shape, public IAnimatable {
 	double tailSizeMaxIncrementor = .4;
 	double tailSizeIncrementor = 0;
 	bool tailSizeFlip = false;
+	
+	void updateFlap();
 	
 public:
 	

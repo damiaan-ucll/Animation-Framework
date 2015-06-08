@@ -14,6 +14,7 @@
 
 class IDrawable;
 class IAnimatable;
+class WorldWindow;
 
 class Scene {
 	
@@ -21,8 +22,10 @@ class Scene {
 	std::vector<IAnimatable*> animatables;
 	
 public:
+
+	const WorldWindow* window;
 	
-	Scene(const IDrawable * window);
+	Scene(const WorldWindow * window);
 	~Scene();
 	
 	std::vector<const IDrawable*>& getDrawables();

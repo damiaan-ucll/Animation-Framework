@@ -10,8 +10,10 @@
 
 #include "IDrawable.h"
 #include "IAnimatable.h"
+#include "WorldWindow.h"
 
-Scene::Scene(const IDrawable * window) {
+Scene::Scene(const WorldWindow * window) {
+	this->window = window;
 	drawables.push_back(window);
 }
 
@@ -22,6 +24,8 @@ Scene::~Scene() {
 	for (auto &animatable : animatables) {
 		delete animatable;
 	}
+	
+	delete window;
 }
 
 std::vector<const IDrawable*>& Scene::getDrawables() {

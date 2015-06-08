@@ -7,6 +7,7 @@
 //
 
 #include "Boid.h"
+#include "WorldWindow.h"
 
 #pragma mark Constructor
 
@@ -49,13 +50,32 @@ void Boid::draw() const {
 # pragma mark Animatable implementation
 
 void Boid::update(Scene &scene) {
+	
+	double wind = 0.05;
+	
+	
+	
+	if (centre.y>scene.window->getTop()-150) {
+		velocity.y -= wind;
+	} if (centre.x>scene.window->getRight()-150) {
+		velocity.x -= wind;
+	} if (centre.y<scene.window->getBottom()+150) {
+		velocity.y += wind;
+	} if (centre.x<scene.window->getLeft()+150) {
+		velocity.x += wind;
+	}
+	
 	centre = centre + velocity;
 	
-	#pragma mark flap
+	updateFlap();
+}
+
+#pragma mark flap
+void Boid::updateFlap() {
 	if (tailSizeIncrementor < 0) {
 		tailSizeFlip = true;
 	} else if (tailSizeIncrementor > tailSizeMaxIncrementor) {
 		tailSizeFlip = false;
 	}
-	tailSizeIncrementor = tailSizeIncrementor + velocity.length()*(tailSizeFlip?.02:-0.02);
+	tailSizeIncrementor = tailSizeIncrementor + (tailSizeFlip?.02:-0.02);
 }
