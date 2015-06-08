@@ -8,6 +8,13 @@
 
 #include "SceneFactory.h"
 
+Boid* readBoid(std::istringstream& lineStream, Colour& colour) {
+	double x, y, size, vx, vy;
+	lineStream >> x >> y >> size >> vx >> vy;
+	Boid *circle = new Boid(Point(x, y), size, Vector(vx, vy), colour);
+	return circle;
+}
+
 Scene* SceneFactory::createScene(std::string const & sceneFile, const WorldWindow* window) {
 	std::ifstream inf(sceneFile);
 	
@@ -44,12 +51,25 @@ Scene* SceneFactory::createScene(std::string const & sceneFile, const WorldWindo
 			scene->addDrawable(circle);
 			scene->addAnimatable(circle);
 		} else if (keyword == "boid") {
-			double x, y, size, vx, vy;
-			lineStream >> x >> y >> size >> vx >> vy;
-			Boid *circle = new Boid(Point(x, y), size, Vector(vx, vy), colour);
+			Boid* boid = readBoid(lineStream, colour);
+			scene->addDrawable(boid);
+			scene->addAnimatable(boid);
+		} else if (keyword == "flock") {
+			int boidCount;
+			Flock* flock = new Flock(colour);
+			lineStream >> boidCount;
 			
-			scene->addDrawable(circle);
-			scene->addAnimatable(circle);
+			for (int i=0 ; i<boidCount; ++i) {
+				std::getline(inf, line);
+				std::istringstream lineStream(line);
+				
+				Boid* boid = readBoid(lineStream, colour);
+				flock->addBoid(boid);
+				
+			}
+
+			scene->addDrawable(flock);
+			scene->addAnimatable(flock);
 		}
 	}
 	

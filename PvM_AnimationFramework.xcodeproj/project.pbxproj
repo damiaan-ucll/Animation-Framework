@@ -50,6 +50,7 @@
 		741423021B25EA0700AB72B9 /* flock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = flock.cpp; path = src/shape/flock.cpp; sourceTree = "<group>"; };
 		741423031B25EA0700AB72B9 /* flock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flock.h; path = src/shape/flock.h; sourceTree = "<group>"; };
 		741423071B263F1A00AB72B9 /* flock1.sdl */ = {isa = PBXFileReference; lastKnownFileType = text; name = flock1.sdl; path = sdl/flock1.sdl; sourceTree = "<group>"; };
+		741423081B26432700AB72B9 /* app4.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app4.cfg; sourceTree = "<group>"; };
 		745C0C621AEE6F7A00E71ACF /* IDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDrawable.h; path = src/shape/IDrawable.h; sourceTree = "<group>"; };
 		745C0C641AEE6FF900E71ACF /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shape.cpp; path = src/shape/Shape.cpp; sourceTree = "<group>"; };
 		745C0C651AEE6FF900E71ACF /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shape.h; path = src/shape/Shape.h; sourceTree = "<group>"; };
@@ -169,6 +170,7 @@
 				74E0925D1AE65DC100A55448 /* app1.cfg */,
 				741422FA1B24ECC600AB72B9 /* app2.cfg */,
 				741423001B25CAF500AB72B9 /* app3.cfg */,
+				741423081B26432700AB72B9 /* app4.cfg */,
 			);
 			path = cfg;
 			sourceTree = "<group>";
