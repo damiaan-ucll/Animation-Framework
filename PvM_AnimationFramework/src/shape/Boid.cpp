@@ -27,6 +27,8 @@ void Boid::setVelocity(const Vector &newValue) { velocity = newValue; }
 # pragma mark - Drawable implementation
 
 void Boid::draw() const {
+	Shape::draw();
+	
 	double angle = velocity.angle();
 	
 	Vector headDirection = velocity;
