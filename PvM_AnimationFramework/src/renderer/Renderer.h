@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <iostream>
 #include "Scene.h"
-#include "Boid.h"
-#include "Point.h"
+#include "IAnimatable.h"
+#include "IDrawable.h"
 
 class Renderer {
 	

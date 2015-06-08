@@ -12,7 +12,7 @@ Scene* SceneFactory::createScene(std::string const & sceneFile, const IDrawable*
 	std::ifstream inf(sceneFile);
 	
 	if (!inf) {
-		std::cout << "test.dat could not be opened!\n";
+		std::cout << sceneFile << " could not be opened!\n";
 		exit(1);
 	}
 	
@@ -40,6 +40,13 @@ Scene* SceneFactory::createScene(std::string const & sceneFile, const IDrawable*
 			double x, y, radius, vx, vy;
 			lineStream >> x >> y >> radius >> vx >> vy;
 			DynamicCircle *circle = new DynamicCircle(Point(x, y), radius, colour, Vector(vx, vy));
+			
+			scene->addDrawable(circle);
+			scene->addAnimatable(circle);
+		} else if (keyword == "boid") {
+			double x, y, size, vx, vy;
+			lineStream >> x >> y >> size >> vx >> vy;
+			Boid *circle = new Boid(Point(x, y), size, Vector(vx, vy), colour);
 			
 			scene->addDrawable(circle);
 			scene->addAnimatable(circle);

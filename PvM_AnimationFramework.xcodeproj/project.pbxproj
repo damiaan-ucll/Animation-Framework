@@ -45,6 +45,7 @@
 		741422FD1B25A39700AB72B9 /* Boid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Boid.cpp; path = src/shape/Boid.cpp; sourceTree = "<group>"; };
 		741422FE1B25A39700AB72B9 /* Boid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Boid.h; path = src/shape/Boid.h; sourceTree = "<group>"; };
 		741423001B25CAF500AB72B9 /* app3.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = app3.cfg; sourceTree = "<group>"; };
+		741423011B25CBCA00AB72B9 /* boids1.sdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = boids1.sdl; path = sdl/boids1.sdl; sourceTree = "<group>"; };
 		745C0C621AEE6F7A00E71ACF /* IDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDrawable.h; path = src/shape/IDrawable.h; sourceTree = "<group>"; };
 		745C0C641AEE6FF900E71ACF /* Shape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Shape.cpp; path = src/shape/Shape.cpp; sourceTree = "<group>"; };
 		745C0C651AEE6FF900E71ACF /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shape.h; path = src/shape/Shape.h; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 			children = (
 				74DD806D1AF8D43200E00060 /* circles.sdl */,
 				741422FC1B24ED1900AB72B9 /* circles2.sdl */,
+				741423011B25CBCA00AB72B9 /* boids1.sdl */,
 			);
 			name = sdl;
 			sourceTree = "<group>";

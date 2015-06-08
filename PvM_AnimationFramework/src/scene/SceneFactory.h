@@ -19,6 +19,7 @@
 #include "Scene.h"
 #include "Circle.h"
 #include "DynamicCircle.h"
+#include "Boid.h"
 
 class SceneFactory {
 public:

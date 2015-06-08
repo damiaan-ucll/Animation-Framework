@@ -33,7 +33,7 @@ void Boid::draw() const {
 	headDirection.normalize();
 	Point head = centre + headDirection * size;
 	
-	double tailOffset = M_PI*0.8;
+	double tailOffset = M_PI*tailSize - tailSizeIncrementor;
 	Point leftTail = Point(centre.x+size*cos(angle+tailOffset), centre.y+size*sin(angle+tailOffset));
 	Point rightTail= Point(centre.x+size*cos(angle-tailOffset), centre.y+size*sin(angle-tailOffset));
 	
@@ -48,4 +48,12 @@ void Boid::draw() const {
 
 void Boid::update(Scene &scene) {
 	centre = centre + velocity;
+	
+	#pragma mark flap
+	if (tailSizeIncrementor < 0) {
+		tailSizeFlip = true;
+	} else if (tailSizeIncrementor > tailSizeMaxIncrementor) {
+		tailSizeFlip = false;
+	}
+	tailSizeIncrementor = tailSizeIncrementor + velocity.length()*(tailSizeFlip?.02:-0.02);
 }

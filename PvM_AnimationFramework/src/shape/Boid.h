@@ -20,6 +20,11 @@ class Boid: public Shape, public IAnimatable {
 	double size;
 	Vector velocity;
 	
+	double tailSize = .9;
+	double tailSizeMaxIncrementor = .4;
+	double tailSizeIncrementor = 0;
+	bool tailSizeFlip = false;
+	
 public:
 	
 	#pragma mark Constructor

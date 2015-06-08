@@ -1,4 +1,4 @@
-colour 0 1 0
+colour .96 .35 .33
 circle 0 0 15
 circle 0 100 15
 circle 0 200 15
@@ -65,7 +65,7 @@ circle 1000 200 15
 circle 1000 300 15
 circle 1000 400 15
 circle 1000 500 15
-colour 1 1 0
+colour .97 .80 .11
 circle 0 50 10
 circle 0 150 10
 circle 0 250 10
@@ -181,7 +181,7 @@ circle 1000 150 10
 circle 1000 250 10
 circle 1000 350 10
 circle 1000 450 10
-colour 0 0 1
+colour .57 .18 .92
 circle 50 50 20
 circle 50 150 20
 circle 50 250 20
