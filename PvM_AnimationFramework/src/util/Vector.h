@@ -27,6 +27,7 @@ public:
 	double dot(Vector&) const;
 	double length() const;
 	void normalize();
+	double angle() const;
 	
 	#pragma mark - Operator overloders
 	Point operator + (const Point& point) const;

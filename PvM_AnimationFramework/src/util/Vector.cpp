@@ -29,6 +29,10 @@ void Vector::normalize() {
 	y /= length;
 }
 
+double Vector::angle() const {
+	return y>0 ? acos(x/length()) : -acos(x/length());
+}
+
 #pragma mark - Operator overloders
 Point Vector::operator + (const Point &point) const {
 	return Point(x + point.x, y + point.y);

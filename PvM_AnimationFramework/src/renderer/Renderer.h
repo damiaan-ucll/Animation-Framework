@@ -4,7 +4,8 @@
 #include <stdio.h>
 #include <iostream>
 #include "Scene.h"
-#include "../shape/DynamicCircle.h"
+#include "Boid.h"
+#include "Point.h"
 
 class Renderer {
 	
